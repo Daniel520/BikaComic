@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  jkhj
+//
+//  Created by 辉仔 on 16/8/29.
+//  Copyright © 2016年 辉君sama. All rights reserved.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define Defaults [NSUserDefaults standardUserDefaults]
+#define NightModeTextColor [UIColor whiteColor]
+#define NightModeTintColor [UIColor whiteColor]
+#define NightModeBackgroundColor [UIColor colorWithRed:76.0/255 green:76.0/255 blue:76.0/255 alpha:1]
+#define NightModeNavigationColor [UIColor colorWithRed:102.0/255 green:102.0/255 blue:102.0/255 alpha:1]
+#define NightModeSeparatorColor [UIColor colorWithRed:231.0/255 green:231.0/255 blue:231.0/255 alpha:0.4]
+#define DefaultModeTintColor [UIColor colorWithRed:28.0/255 green:113.0/255 blue:254.0/255 alpha:1]
+#define DefaultModeNavigationColor [UIColor colorWithRed:245.0/255 green:245.0/255 blue:245.0/255 alpha:1]
+#define DefaultModeSeparatorColor [UIColor colorWithRed:191.0/255 green:192.0/255 blue:191.0/255 alpha:1]
+
+
+#endif /* PrefixHeader_pch */
