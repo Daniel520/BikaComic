@@ -64,16 +64,24 @@ ps：哔卡的接口是真的简单＝ ＝
 ![夜间模式6.png](http://upload-images.jianshu.io/upload_images/1781300-3b79d82ed4996800.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ###未实现功能:
-1.滑动阅读与横屏阅读（目前只能竖屏分页阅读）
-2.评分功能
-3.下载漫画功能
-4.日间模式的界面配色
-5.其他还没想到…………
+1.滑动阅读与横屏阅读（目前只能竖屏分页阅读）  
+  
+2.评分功能  
+  
+3.下载漫画功能  
+  
+4.日间模式的界面配色  
+  
+5.其他还没想到…………  
+  
 
 ###用到的第三方框架:
-1.MJRefresh
-2.SDWebImage
-3.AFNetworking
+1.MJRefresh  
+  
+2.SDWebImage  
+  
+3.AFNetworking  
+  
 
 ###后记
 如果没什么事的话，该项目会不定期更新（希望不会被和谐）
