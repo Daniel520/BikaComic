@@ -10,7 +10,7 @@
 ps：哔卡的接口是真的简单＝ ＝
 
 ###简书地址：[freedomstar/BikaComic](http://www.jianshu.com/p/4f1a2e331a8b) 
-***
+
 ###已实现功能:
 1.各个页面的漫画列表，漫画信息，漫画内容（图片）的获取
 
