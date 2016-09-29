@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Over.jpg",
+      "filename" : "Over.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Over@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "Over@3x.png"
     }
   ],
   "info" : {

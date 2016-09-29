@@ -113,9 +113,21 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row==3)
+    {
+        [self performSegueWithIdentifier:@"ToKnightRank" sender:self];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"List" sender:self];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3+self.classify.count;
+    return 4+self.classify.count;
 }
 
 
@@ -151,8 +163,14 @@
             [cell.Icon setImage:[UIImage imageNamed:@"MyCollection"]];
             break;
             
+        case 3:
+            [cell.Title setText:@"骑士榜"];
+            [cell.Icon setImage:[UIImage imageNamed:@"KnightRank"]];
+            break;
+
+            
         default:
-            dic=self.classify[indexPath.row-3];
+            dic=self.classify[indexPath.row-4];
             [cell.Title setText: [dic objectForKey:@"name"]];
             [cell.Icon sd_setImageWithURL:[dic objectForKey:@"cover_image"]];
             break;
@@ -206,15 +224,20 @@
             case 0:
                 a.urlKey=[NSString stringWithFormat:@"where/most-updated"];
                 break;
+                
             case 1:
                 a.urlKey=[NSString stringWithFormat:@"where/finished"];
                 break;
+                
             case 2:
                 a.urlKey=[NSString stringWithFormat:@"MyCollection"];
                 break;
                 
+            case 3:
+                break;
+                
             default:
-                 dic=self.classify[self.tableView.indexPathForSelectedRow.row-3];
+                 dic=self.classify[self.tableView.indexPathForSelectedRow.row-4];
                 a.urlKey=[NSString stringWithFormat:@"%@",[dic objectForKey:@"id"]];
                 break;
         }

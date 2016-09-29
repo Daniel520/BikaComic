@@ -104,12 +104,13 @@
             Models.display_name=[NSString stringWithFormat:@"%@",[Model objectForKey:@"display_name"]];
             Models.created_at=[NSString stringWithFormat:@"%@",[Model objectForKey:@"created_at"]];
             Models.comment=[NSString stringWithFormat:@"%@",[Model objectForKey:@"comment"]];
+            Models.comment_index=[NSString stringWithFormat:@"%@",[Model objectForKey:@"comment_index"]];
             [self.CommentModelArray addObject:Models];
         }
         if (CommentArray.count>0)
             self.PageCount++;
         [self.CommentTableView reloadData];
-        if (CommentArray.count>0)
+        if (CommentArray.count>0&&CommentArray.count==20)
         {
             [self.CommentTableView.mj_footer endRefreshing];
         }
@@ -134,9 +135,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CommentCell* cell=[self.CommentTableView dequeueReusableCellWithIdentifier:@"CommentCell"];
-    if (cell == nil) {
+    if (cell == nil)
         cell = [[CommentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CommentCell"];
-    }
     if ([Defaults boolForKey:@"NightMode"])
     {
         [cell.created_at setTextColor:NightModeTextColor];
@@ -151,7 +151,8 @@
     cell.created_at.text=Models.created_at;
     cell.comment.text=Models.comment;
     [cell.comment sizeToFit];
-    cell.comment_index.text=[NSString stringWithFormat:@"第%lu楼",(self.CommentModelArray.count-indexPath.row)];
+    NSString*comment_index=[NSString stringWithFormat:@"%@",Models.comment_index];
+    cell.comment_index.text=[NSString stringWithFormat:@"第%ld楼",[comment_index integerValue]+1];
     cell.Height=12+cell.display_name.frame.size.height+cell.created_at.frame.size.height+cell.comment.frame.size.height+5;
     Models.Height=cell.Height;
     return cell;

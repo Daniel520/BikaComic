@@ -64,7 +64,6 @@
         {
             footer.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhite;
             [footer.stateLabel setTextColor:NightModeTextColor];
-            
         }
         else
         {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3910E7BC1D9C0B520088F94D /* KnightRankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3910E7BB1D9C0B520088F94D /* KnightRankTableViewController.m */; };
+		3910E7C11D9C0BD10088F94D /* KnightRankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3910E7C01D9C0BD10088F94D /* KnightRankTableViewCell.m */; };
+		3910E7C31D9CBAE50088F94D /* KnightRank.png in Resources */ = {isa = PBXBuildFile; fileRef = 3910E7C21D9CBAE50088F94D /* KnightRank.png */; };
 		391873071D5A087600E40B37 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 391873061D5A087600E40B37 /* MainTableViewController.m */; };
 		3918730D1D5A094D00E40B37 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3918730C1D5A094D00E40B37 /* MainTableViewCell.m */; };
 		391873151D5A1F8E00E40B37 /* new.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 391873141D5A1F8E00E40B37 /* new.jpg */; };
@@ -106,6 +109,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3910E7BA1D9C0B520088F94D /* KnightRankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnightRankTableViewController.h; sourceTree = "<group>"; };
+		3910E7BB1D9C0B520088F94D /* KnightRankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnightRankTableViewController.m; sourceTree = "<group>"; };
+		3910E7BF1D9C0BD10088F94D /* KnightRankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnightRankTableViewCell.h; sourceTree = "<group>"; };
+		3910E7C01D9C0BD10088F94D /* KnightRankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnightRankTableViewCell.m; sourceTree = "<group>"; };
+		3910E7C21D9CBAE50088F94D /* KnightRank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnightRank.png; sourceTree = "<group>"; };
 		391873051D5A087600E40B37 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		391873061D5A087600E40B37 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		3918730B1D5A094D00E40B37 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -276,6 +284,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3910E7B91D9C0B240088F94D /* KnightRank */ = {
+			isa = PBXGroup;
+			children = (
+				3910E7BE1D9C0B630088F94D /* View */,
+				3910E7BD1D9C0B5F0088F94D /* Controller */,
+			);
+			name = KnightRank;
+			sourceTree = "<group>";
+		};
+		3910E7BD1D9C0B5F0088F94D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3910E7BA1D9C0B520088F94D /* KnightRankTableViewController.h */,
+				3910E7BB1D9C0B520088F94D /* KnightRankTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3910E7BE1D9C0B630088F94D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3910E7BF1D9C0BD10088F94D /* KnightRankTableViewCell.h */,
+				3910E7C01D9C0BD10088F94D /* KnightRankTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		391872FC1D5A031200E40B37 /* list */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +402,7 @@
 		391873081D5A091800E40B37 /* MainTableView */ = {
 			isa = PBXGroup;
 			children = (
+				3910E7B91D9C0B240088F94D /* KnightRank */,
 				39AAFC2A1D734344001A3D37 /* Setting */,
 				391872FC1D5A031200E40B37 /* list */,
 				3918730A1D5A093100E40B37 /* View */,
@@ -667,6 +703,7 @@
 		39F1D55A1D3E1B4000671B82 /* picture */ = {
 			isa = PBXGroup;
 			children = (
+				3910E7C21D9CBAE50088F94D /* KnightRank.png */,
 				39AAFC281D7341FB001A3D37 /* MyCollection.png */,
 				39D2AD671D5E0D5300F9A574 /* coverPage.jpg */,
 				395799091D5C512B00F84241 /* Eixt.png */,
@@ -751,8 +788,9 @@
 		39DD16D21D3BBE1900E1F60E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "珠海市晟睿网络科技有限公司";
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "辉仔sama";
 				TargetAttributes = {
 					39DD16D91D3BBE1900E1F60E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -804,6 +842,7 @@
 				39BADEC21D5B24B500B0BD1C /* appicon副本.png in Resources */,
 				39BADEC41D5B256D00B0BD1C /* appicon1.png in Resources */,
 				39BADECB1D5B26B500B0BD1C /* appicon120.png in Resources */,
+				3910E7C31D9CBAE50088F94D /* KnightRank.png in Resources */,
 				39AAFC291D7341FB001A3D37 /* MyCollection.png in Resources */,
 				39BADED11D5B27AB00B0BD1C /* appicon58.png in Resources */,
 				39D2AD681D5E0D5300F9A574 /* coverPage.jpg in Resources */,
@@ -854,11 +893,13 @@
 				39DD17531D3BC54200E1F60E /* SDWebImageManager.m in Sources */,
 				39F1D5551D3DF9E400671B82 /* MJRefreshConst.m in Sources */,
 				39F1D54D1D3DF9E400671B82 /* MJRefreshAutoStateFooter.m in Sources */,
+				3910E7C11D9C0BD10088F94D /* KnightRankTableViewCell.m in Sources */,
 				39D2AD641D5E04E400F9A574 /* CommentModel.m in Sources */,
 				39DD16E21D3BBE1900E1F60E /* AppDelegate.m in Sources */,
 				39F1D5481D3DF9E400671B82 /* MJRefreshComponent.m in Sources */,
 				39F1D54E1D3DF9E400671B82 /* MJRefreshBackGifFooter.m in Sources */,
 				3918730D1D5A094D00E40B37 /* MainTableViewCell.m in Sources */,
+				3910E7BC1D9C0B520088F94D /* KnightRankTableViewController.m in Sources */,
 				39DD16DF1D3BBE1900E1F60E /* main.m in Sources */,
 				39DD175A1D3BC54200E1F60E /* UIImageView+WebCache.m in Sources */,
 				391873071D5A087600E40B37 /* MainTableViewController.m in Sources */,
@@ -964,8 +1005,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1011,8 +1054,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

@@ -32,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *EP;
 @property (weak, nonatomic  ) IBOutlet UISlider             *PageSlider;
 @property (strong,nonatomic ) NSArray              * array;
+@property (strong,nonatomic ) UIView         *ContentView;
 @end
 
 @implementation readView
@@ -55,6 +56,7 @@
 
 -(void)SetUp
 {
+    self.ContentView=[[UIView alloc]init];
     [self.PageItem setTitle:[NSString stringWithFormat:@"???"]];
     [self.EP setTitle:[NSString stringWithFormat:@"第%ld话",(long)self.ep]];
     [self.Title setTitle:self.comicname];
@@ -104,9 +106,9 @@
     self.readScrollView3.bounces=YES;
 
     
-    [self.scrollView addSubview:self.readScrollView1];
-    [self.scrollView addSubview:self.readScrollView2];
-    [self.scrollView addSubview:self.readScrollView3];
+    [self.ContentView addSubview:self.readScrollView1];
+    [self.ContentView addSubview:self.readScrollView2];
+    [self.ContentView addSubview:self.readScrollView3];
     self.toolbar.hidden                       = YES;
     [super.navigationController setNavigationBarHidden:YES animated:YES];
     self.navigationControllerIsHidden         = YES;
@@ -120,7 +122,15 @@
               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
      {
          self.array=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-         [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width*self.array.count,0)];
+         [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width*self.array.count,self.scrollView.frame.size.height)];
+         [self.ContentView setFrame:CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height)];
+         [self.scrollView addSubview:self.ContentView];
+//         self.readScrollView3.scrollEnabled=NO;
+//          self.readScrollView2.scrollEnabled=NO;
+//          self.readScrollView1.scrollEnabled=NO;
+//         self.scrollView.minimumZoomScale=1;
+//         self.scrollView.maximumZoomScale=2;
+//         self.scrollView.pagingEnabled=NO;
          self.count                                = self.array.count;
          [self SetImageWithImageView:self.imageview1 readScrollView:self.readScrollView1  ReadViews:self.readView1  PageCount:0];
          if (self.array.count>1)
@@ -280,6 +290,9 @@
 
 -(void)SetImageWithImageView:(UIImageView*)ImageView readScrollView:(UIScrollView*)readScrollview ReadViews:(UIView*) readView PageCount:(NSInteger)PageTag
 {
+    if (PageTag<0||PageTag>self.array.count-1) {
+        return;
+    }
     NSDictionary *dic=self.array[PageTag];
     CGFloat X=[UIScreen mainScreen].bounds.size.width*(PageTag);
     CGFloat width=self.scrollView.frame.size.width;
@@ -311,6 +324,7 @@
 
 - (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
+//    return  self.ContentView;
     switch (scrollView.tag)
     {
         case 1:
@@ -326,7 +340,7 @@
             break;
             
         default:
-                return  nil;
+                return  self.ContentView;
             break;
     }
 }
