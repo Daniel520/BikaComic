@@ -1,4 +1,7 @@
-# BikaComic
+# BikaComic（哔卡更新了2.0接口，该项目暂时无效）
+
+项目中的旧接口已停用(应该是为了2.0版本而停的)，有时间再更新后
+
 自制ios哔卡漫画客户端
 
 ![哔卡漫画](http://upload-images.jianshu.io/upload_images/1781300-58b389aea2ddb3d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
